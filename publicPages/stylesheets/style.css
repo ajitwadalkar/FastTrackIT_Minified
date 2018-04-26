@@ -1,0 +1,133 @@
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.headerContainer{
+  height: 100px;
+  border-bottom: solid 2px silver;
+}
+
+.mainContainer{
+  width: 100%;
+  height: 400px;
+  border: solid 1px black;
+}
+
+.leftDiv{
+  float: left;
+  background-color: beige;
+  width: 29%;
+  height: 100%;
+  border-right: solid 2px silver;
+
+}
+
+.summaryDiv{
+  border: solid 1px silver;
+  border-radius: 10px;
+  margin: 30px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  box-shadow: 3px 3px 3px #2E2E2E;
+}
+
+.uploadDiv{
+  border: solid 1px silver;
+  border-radius: 10px;
+  margin: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  box-shadow: 3px 3px 3px #2E2E2E;
+}
+
+.uploadDiv img
+{
+  border: solid 2px gray;
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow: 3px 3px 5px #2E2E2E;
+}
+
+.leftDiv,h3
+{
+  text-align: center;
+}
+.rightDiv{
+  float: left;
+  background-color: #f2f2f2;
+  width: 70%;
+  height: 100%;
+}
+
+.tableClass{
+  margin: 0 auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+th{
+  background-color: silver;
+}
+
+input[type="search"]{
+  margin: 10px;
+  padding: 5px;
+  width: 60%;
+  height: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px #2E2E2E;
+  outline:none;
+}
+
+
+::-webkit-input-placeholder {
+  color: gray;
+}
+
+.searchBox{
+  border: solid 1px silver;
+  border-radius: 10px;
+  margin: 45px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  box-shadow: 3px 3px 3px #2E2E2E;
+  text-align: center;
+}
+
+.resultBox{
+  border: solid 1px silver;
+  border-radius: 10px;
+  margin: 30px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  box-shadow: 3px 3px 3px #2E2E2E;
+  text-align: center;
+}
+
+.resultTable{
+  overflow: auto;
+  max-height: 100px;
+}
+
+input[type="button"]{
+  border: solid 1px silver;
+  border-radius: 6px;
+  padding: 5px 40px 5px 40px;
+  font-weight: bolder;
+  box-shadow: 3px 3px 3px #2E2E2E;
+}
+
+
+@media all and (max-width: 768px) {
+.leftDiv {width: 100%;}
+.rightDiv{width: 100%;}
+.summaryDiv{width: 95%; margin: 0 auto; margin-top: 10px; margin-bottom: 10px; }
+.searchBox{width: 95%; margin: 0 auto;  margin-top: 10px; margin-bottom: 10px;}
+.resultBox{width: 95%; margin: 0 auto; margin-top: 10px; margin-bottom: 10px;}
+.uploadDiv{width: 95%; margin: 0 auto; margin-top: 10px; margin-bottom: 10px;}
+.mainContainer{height: auto}
+}

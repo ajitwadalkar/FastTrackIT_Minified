@@ -1,0 +1,49 @@
+extends layout
+block head
+    script(src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous")
+
+block content
+    div(class='headerContainer')
+        img(src='/images/logo.png', height='100px')
+
+    div(class='mainContainer')
+        div(class='leftDiv')
+            div(class='summaryDiv')
+                h3 Summary Statistics
+                table(class='tableClass', cellpadding=0, cellspacing=0, border=1)
+                    tr
+                        td SKUs in System
+                        td= totalSKU
+                    tr
+                        td Last Import
+                        td= modifyDate
+
+            div(class='uploadDiv')
+                h3 Upload CSV
+                form#form1(action='/upload',method='post', enctype='multipart/form-data')
+                    input(type="file", name="csvFile", onchange='triggerValidation(this)')
+                br
+                img(src="/images/upload.png", onclick='SubmitForm()', width= '50px')
+
+        div(class='rightDiv')
+            div(class='searchBox')
+                input#input(type='search', placeholder='Search UPC', name='s', size='medium')
+                label#errmsg
+
+            div(class='resultBox')
+                div(class='resultTable')
+                    table#tableData(class='tableClass', cellpadding=0, cellspacing=0, border=1)
+                        tr
+                            th UPC
+                            th Return Quantity
+                            th Seller
+                            th Item Brand
+                            th Todo
+                            th Search Date
+
+                br
+                input#tab2csv(type ='button' name='tab2csv' value='CSV download and FTP upload')
+                script(src="javascripts/index.js")
+                script(src="javascripts/table2CSV.js")
